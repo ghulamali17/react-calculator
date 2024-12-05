@@ -7,20 +7,19 @@ function App() {
   const getvalue = (event) => {
     const value = event.target.value;
     if (value === "C") {
-      setData(""); // Clear input
+      setData(""); 
     } else if (value === "D") {
-      setData(data.slice(0, -1)); // Delete last character
+      setData(data.slice(0, -1)); 
     } else {
-      setData(data.concat(value)); // Add value
+      setData(data.concat(value));
     }
   };
 
   const calculation = () => {
     try {
-      // Evaluate the expression safely
       setData(eval(data).toString());
     } catch (error) {
-      setData("Error"); // Display error on invalid expression
+      setData("Error");
     }
   };
 
